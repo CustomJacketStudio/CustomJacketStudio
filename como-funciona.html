@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Cómo funciona? – CustomJacket Studio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">CustomJacket Studio</div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="personalizar.html" class="nav-link">Personaliza</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="como-funciona.html" class="nav-link active">¿Cómo funciona?</a>
+        <a href="quienes-somos.html" class="nav-link">¿Quiénes somos?</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="container">
+
+    <h1 class="funciona-title">¿Cómo funciona?</h1>
+
+    <!-- PASO 1 -->
+    <section class="paso">
+        <h3>1. Elige el material de la chaqueta</h3>
+        <p>
+            Selecciona entre <strong>Cuero, Jean, Gabán o Blazer</strong>.  
+            Esto definirá los colores y tallas disponibles.
+        </p>
+        <img src="assets/img/como-funciona/paso-1-material.PNG" class="img-paso" alt="Paso 1">
+    </section>
+
+    <!-- PASO 2 -->
+    <section class="paso">
+        <h3>2. Elige el color</h3>
+        <p>
+            Los colores disponibles cambian automáticamente según el material seleccionado.
+        </p>
+        <img src="assets/img/como-funciona/paso-2-material.PNG" class="img-paso" alt="Paso 2">
+    </section>
+
+    <!-- PASO 3 -->
+    <section class="paso">
+        <h3>3. Elige la talla</h3>
+        <p>
+            Se activan solo las tallas disponibles y la chaqueta ajusta su escala según la talla.
+        </p>
+        <img src="assets/img/como-funciona/paso-3-material.PNG" class="img-paso" alt="Paso 3">
+    </section>
+
+    <!-- PASO 4 -->
+    <section class="paso">
+        <h3>4. Vista previa de tu chaqueta</h3>
+        <p>
+            Observa cómo se verá tu chaqueta final en <strong>frente y espalda</strong>.
+        </p>
+        <img src="assets/img/como-funciona/paso-4-material.PNG" class="img-paso" alt="Paso 4">
+    </section>
+
+    <!-- PASO 5 -->
+    <section class="paso">
+        <h3>5. Elige el diseño</h3>
+        <p>
+            Sube tus archivos personalizados para:
+            <br>• Espalda &nbsp; • Manga derecha &nbsp; • Manga izquierda &nbsp; • Bolsillo
+            <br>Cada zona mostrará una miniatura en vivo.
+        </p>
+        <img src="assets/img/como-funciona/paso-5-material.PNG" class="img-paso" alt="Paso 5">
+    </section>
+
+    <!-- PASO 6 -->
+    <section class="paso">
+        <h3>6. Selecciona el tipo de acabado</h3>
+        <p>
+            Define si tu diseño será en <strong>Bordado</strong> o <strong>Estampado</strong>.
+        </p>
+        <img src="assets/img/como-funciona/paso-6-material.PNG" class="img-paso" alt="Paso 6">
+    </section>
+
+    <!-- PASO 7 -->
+    <section class="paso">
+        <h3>7. Ingresa tus datos</h3>
+        <p>
+            Completa tu <strong>Nombre, Correo y WhatsApp</strong>.  
+            Presiona <strong>“Enviar mi diseño”</strong> para recibir tu previsualización final + cotización.
+        </p>
+        <img src="assets/img/como-funciona/paso-7-material.PNG" class="img-paso" alt="Paso 7">
+    </section>
+
+</main>
+
+      <!-- MODAL LEGAL -->
+    <div id="modalLegal" class="modal-legal hidden">
+        <div class="modal-legal-box">
+            <span class="modal-close" onclick="cerrarModalLegal()">×</span>
+            <h2 id="modalLegalTitulo"></h2>
+            <div id="modalLegalContenido" class="modal-legal-content"></div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/customjacketsstudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon"><img src="assets/img/instagram-icon.png" alt=""></a>
+                <a href="https://www.tiktok.com/@customjacketstudio" class="social-icon"><img src="assets/img/tiktok-icon.png" alt=""></a>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="abrirModalLegal('terminos')">Términos y condiciones</a>
+                <a href="#" class="footer-link" onclick="abrirModalLegal('cookies')">Política de cookies</a>
+                <a href="#" class="footer-link" onclick="abrirModalLegal('privacidad')">Política de privacidad</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2025 CustomJacket Studio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+      <script src="assets/js/main.js"></script>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a id="btnWhatsapp" 
+    href="https://wa.me/573016516541?text=Hola%2C%20quiero%20más%20información%20sobre%20mi%20diseño%20de%20chaqueta." 
+    target="_blank" 
+    class="whatsapp-float">
+    <img src="assets/img/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+    <script>
+    const textosLegales = {
+    terminos: {
+        titulo: "Términos y Condiciones",
+        texto: `
+        • Nuestro servicio consiste en la personalización de chaquetas bajo pedido.<br><br>
+        • El cliente es responsable de verificar el diseño antes de confirmar el pedido.<br><br>
+        • Los tiempos de fabricación pueden variar entre 10 a 15 días hábiles.<br><br>
+        • No se aceptan devoluciones por personalizaciones aprobadas.<br><br>
+        • CustomJacket Studio garantiza materiales de calidad y fabricación cuidadosa.
+        `
+    },
+
+    cookies: {
+        titulo: "Política de Cookies",
+        texto: `
+        • Utilizamos cookies para mejorar la experiencia del usuario.<br><br>
+        • No almacenamos información personal sin autorización.<br><br>
+        • Puedes desactivar las cookies desde tu navegador cuando lo desees.<br><br>
+        • Usamos datos de navegación únicamente con fines estadísticos.
+        `
+    },
+
+    privacidad: {
+        titulo: "Política de Privacidad",
+        texto: `
+        • Los datos suministrados son utilizados únicamente para procesar pedidos.<br><br>
+        • No compartimos información personal con terceros.<br><br>
+        • Puedes solicitar eliminación de tus datos cuando quieras.<br><br>
+        • Toda comunicación se maneja bajo estricta confidencialidad.
+        `
+    }
+    };
+
+    function abrirModalLegal(tipo) {
+    const modal = document.getElementById("modalLegal");
+    const titulo = document.getElementById("modalLegalTitulo");
+    const contenido = document.getElementById("modalLegalContenido");
+
+    titulo.innerHTML = textosLegales[tipo].titulo;
+    contenido.innerHTML = textosLegales[tipo].texto;
+
+    modal.classList.remove("hidden");
+    }
+
+    function cerrarModalLegal() {
+    document.getElementById("modalLegal").classList.add("hidden");
+    }
+    </script>
+
+</body>
+</html>
+

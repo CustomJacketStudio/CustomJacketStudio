@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personaliza tu chaqueta</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">CustomJacket Studio</div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="personalizar.html" class="nav-link active">Personaliza</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="como-funciona.html" class="nav-link">¿Cómo funciona?</a>
+        <a href="quienes-somos.html" class="nav-link">¿Quiénes somos?</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <h1 class="section-title">Personaliza tu chaqueta</h1>
+
+    <!-- 1. Material -->
+    <section class="section compact">
+      <h2>1. Elije el material</h2>
+
+      <div class="options-row" id="materialOptions">
+          <button class="option-btn selected" data-material="cuero">Cuero</button>
+          <button class="option-btn" data-material="jean">Jean</button>
+          <button class="option-btn" data-material="gaban">Gaban</button>
+          <button class="option-btn" data-material="blazer">Blazer</button>
+      </div>
+      <hr class="section-divider">
+    </section>
+
+    <!-- 2. Color -->
+    <section class="section compact">
+      <h2>2. Elije el Color</h2>
+
+      <div class="options-row" id="colorOptions">
+          <button class="option-btn selected" data-color="negro">Negro</button>
+          <button class="option-btn" data-color="gris">Gris</button>
+          <button class="option-btn" data-color="cafe">Café</button>
+          <button class="option-btn" data-color="beige">Beige</button>
+          <button class="option-btn" data-color="azul-oscuro">Azul Oscuro</button>
+          <button class="option-btn" data-color="azul-claro">Azul Claro</button>
+      </div>
+      <hr class="section-divider">
+    </section>
+
+    <!-- 3. Talla -->
+    <section class="section">
+      <h2>3. Elije la talla</h2>
+
+    <div class="options-row" id="sizeOptions">
+      <button class="option-btn" data-size="XS">XS</button>
+      <button class="option-btn" data-size="S">S</button>
+      <button class="option-btn selected" data-size="M">M</button>
+      <button class="option-btn" data-size="L">L</button>
+      <button class="option-btn" data-size="XL">XL</button>
+    </div>
+
+      <hr class="section-divider">
+    </section>
+
+    <!-- 4. Vista previa (ahora más arriba y más grande) -->
+    <section class="section">
+      <h2>4. Vista previa de tu chaqueta</h2>
+
+      <div class="preview-row">
+        <div class="preview-card">
+          <img id="preview-frente" src="assets/img/modelos de chaquetas/default-frente.png" alt="Vista previa frente">
+        </div>
+
+        <div class="preview-card">
+          <img id="preview-espalda" src="assets/img/modelos de chaquetas/default-espalda.png" alt="Vista previa espalda">
+        </div>
+      </div>
+
+      <hr class="section-divider">
+    </section>
+
+
+    <!-- 5. Diseño -->
+    <section class="section compact">
+    <h2>5. Elije el diseño</h2>
+
+    <!-- Grid ordenada con las subidas -->
+    <div class="design-upload-grid">
+
+        <div class="upload-box">
+        <label>Diseño para espalda</label>
+        <input type="file" accept="image/*"
+              onchange="previewDesign(this, 'upload-espalda')">
+        <img id="upload-espalda" class="design-preview">
+      </div>
+
+      <div class="upload-box">
+        <label>Manga derecha</label>
+        <input type="file" accept="image/*"
+              onchange="previewDesign(this, 'upload-mangaDer')">
+        <img id="upload-mangaDer" class="design-preview">
+      </div>
+
+      <div class="upload-box">
+        <label>Manga izquierda</label>
+        <input type="file" accept="image/*"
+              onchange="previewDesign(this, 'upload-mangaIzq')">
+        <img id="upload-mangaIzq" class="design-preview">
+      </div>
+
+      <div class="upload-box">
+        <label>Bolsillo</label>
+        <input type="file" accept="image/*"
+              onchange="previewDesign(this, 'upload-bolsillo')">
+        <img id="upload-bolsillo" class="design-preview">
+      </div>
+
+
+    </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 6. Acabado -->
+    <section class="section compact">
+      <h2>6. Tipo de acabado</h2>
+
+      <div class="options-row" id="acabadoOptions">
+        <button class="option-btn">Bordado</button>
+        <button class="option-btn selected">Estampado</button>
+      </div>
+
+      <hr class="section-divider">
+    </section>
+
+    <!-- 7. Tus datos -->
+    <section class="section">
+      <h2>7. Tus datos</h2>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="clienteNombre">Nombre completo</label>
+          <input type="text" id="clienteNombre" placeholder="Tu nombre">
+        </div>
+
+        <div class="form-field">
+          <label for="clienteEmail">Correo electrónico</label>
+          <input type="email" id="clienteEmail" placeholder="email@ejemplo.com">
+        </div>
+
+        <div class="form-field">
+          <label for="clienteTelefono">Celular / WhatsApp</label>
+          <input type="tel" id="clienteTelefono" placeholder="+57 300 000 0000">
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Enviar diseño -->
+    <section class="section">
+      <button id="btnEnviar" class="btn-primary">Enviar mi diseño</button>
+    </section>
+
+    <!-- Modal de confirmación -->
+    <div id="modalConfirm" class="modal-overlay hidden">
+      <div class="modal-box">
+        <h3>¡Diseño enviado!</h3>
+        <p>
+          La información ha sido enviada a uno de nuestros asesores.<br>
+          En breve recibirás un preview de tu diseño y podrás proceder al pago.
+        </p>
+        <button id="closeModal" class="btn-primary">Cerrar</button>
+        
+      </div>
+    </div>
+
+
+  </main>
+
+    <!-- MODAL LEGAL -->
+    <div id="modalLegal" class="modal-legal hidden">
+        <div class="modal-legal-box">
+            <span class="modal-close" onclick="cerrarModalLegal()">×</span>
+            <h2 id="modalLegalTitulo"></h2>
+            <div id="modalLegalContenido" class="modal-legal-content"></div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/customjacketsstudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon"><img src="assets/img/instagram-icon.png" alt=""></a>
+                <a href="https://www.tiktok.com/@customjacketstudio" class="social-icon"><img src="assets/img/tiktok-icon.png" alt=""></a>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="abrirModalLegal('terminos')">Términos y condiciones</a>
+                <a href="#" class="footer-link" onclick="abrirModalLegal('cookies')">Política de cookies</a>
+                <a href="#" class="footer-link" onclick="abrirModalLegal('privacidad')">Política de privacidad</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2025 CustomJacket Studio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+      <script src="assets/js/main.js"></script>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a id="btnWhatsapp" 
+    href="https://wa.me/573016516541?text=Hola%2C%20quiero%20más%20información%20sobre%20mi%20diseño%20de%20chaqueta." 
+    target="_blank" 
+    class="whatsapp-float">
+    <img src="assets/img/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+    <script>
+    const textosLegales = {
+    terminos: {
+        titulo: "Términos y Condiciones",
+        texto: `
+        • Nuestro servicio consiste en la personalización de chaquetas bajo pedido.<br><br>
+        • El cliente es responsable de verificar el diseño antes de confirmar el pedido.<br><br>
+        • Los tiempos de fabricación pueden variar entre 10 a 15 días hábiles.<br><br>
+        • No se aceptan devoluciones por personalizaciones aprobadas.<br><br>
+        • CustomJacket Studio garantiza materiales de calidad y fabricación cuidadosa.
+        `
+    },
+
+    cookies: {
+        titulo: "Política de Cookies",
+        texto: `
+        • Utilizamos cookies para mejorar la experiencia del usuario.<br><br>
+        • No almacenamos información personal sin autorización.<br><br>
+        • Puedes desactivar las cookies desde tu navegador cuando lo desees.<br><br>
+        • Usamos datos de navegación únicamente con fines estadísticos.
+        `
+    },
+
+    privacidad: {
+        titulo: "Política de Privacidad",
+        texto: `
+        • Los datos suministrados son utilizados únicamente para procesar pedidos.<br><br>
+        • No compartimos información personal con terceros.<br><br>
+        • Puedes solicitar eliminación de tus datos cuando quieras.<br><br>
+        • Toda comunicación se maneja bajo estricta confidencialidad.
+        `
+    }
+    };
+
+    function abrirModalLegal(tipo) {
+    const modal = document.getElementById("modalLegal");
+    const titulo = document.getElementById("modalLegalTitulo");
+    const contenido = document.getElementById("modalLegalContenido");
+
+    titulo.innerHTML = textosLegales[tipo].titulo;
+    contenido.innerHTML = textosLegales[tipo].texto;
+
+    modal.classList.remove("hidden");
+    }
+
+    function cerrarModalLegal() {
+    document.getElementById("modalLegal").classList.add("hidden");
+    }
+    </script>
+
+</body>
+</html>
+
